@@ -1,0 +1,32 @@
+{
+  "name": "crm",
+  "version": "1.0.0",
+  "description": "projeto para gerenciar contatos",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon ./index.js localhost 3001",
+    "build": "webpack",
+    "watch": "webpack serve --watch --open --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filcavalcante/projeto_contatos.git"
+  },
+  "author": "Filipe Cavalcante",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/filcavalcante/projeto_contatos/issues"
+  },
+  "homepage": "https://github.com/filcavalcante/projeto_contatos#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

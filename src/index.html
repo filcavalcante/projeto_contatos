@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js</title>
+    <!-- Estilos para a modal -->
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 40%;
+            text-align: center;
+        }
+    
+        .close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title"></h1>
+    <h2>Criando ambiente / app com Node</h2>
+
+    <ul id="list" class="contact-list"></ul>    
+
+    <form id="contactForm" action="http://localhost:3001/contact" method="post">
+        <input type="text" name="name" placeholder="Informe um nome" required>
+        <button type="submit">Gravar</button>
+    </form>
+
+    <!-- Modal de Edição -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeEditModal">&times;</span>
+            <h2>Editar Contato</h2>
+            <input type="text" id="editNameInput" placeholder="Novo Nome">
+            <button id="saveEditButton">Gravar Alteração</button>
+            <button id="cancelEditButton">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="http://localhost:3001/client.js"></script>
+</body>
+</html>
